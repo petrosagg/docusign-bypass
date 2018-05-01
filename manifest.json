@@ -1,0 +1,12 @@
+{
+  "name": "DocuSign Print & Download",
+  "version": "1.0",
+  "description": "Bypass DocuSign's nonsense policy that disallows printing and other actions",
+  "content_scripts": [{
+    "matches":[ "https://www.docusign.net/Signing/*" ],
+    "js":[ "loader.js" ],
+    "run_at": "document_start"
+  }],
+  "web_accessible_resources": [ "xhook.min.js", "main.js" ],
+  "manifest_version": 2
+}
